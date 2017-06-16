@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class palindrome {
+	public static void main(String[] args) {
+		System.out.println("enter a string : ");
+		String str=new String();
+		Scanner t = new Scanner(System.in);
+		str=t.next();
+		boolean b = check(str);
+		System.out.println(b);
+	}
+	public static boolean check(String str){
+		
+		char[] chr = new char[str.length()];
+		chr=str.toCharArray();
+		int j, i;
+		int len=str.length();
+		for (i=0,j=len-1; i<=len/2;i++,j--)
+		{
+			if(chr[i]==chr[j])
+				continue;
+			else
+				return false;
+		}
+		return true;
+	
+	}
+	}
